@@ -1,2 +1,15 @@
 language: c
-compiler: clang
+compiler: gcc
+
+os: linux
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
+
+script:
+  - cmake --version
+  - cmake CMakeLists.txt
+  - cmake  --build . --target neat
