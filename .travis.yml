@@ -1,9 +1,15 @@
 notifications:
   email: false
 
+dist: trusty
+
 language: c
 
 compiler: gcc
+
+addons:
+  sonarcloud:
+    organization: "nathan-lg-github"
 
 before_install:
   - sudo apt-get update -qq
@@ -15,5 +21,6 @@ before_script:
   - mkdir build
   - cd build
   - cmake ..
+  - sonar-scanner
 
 script: make

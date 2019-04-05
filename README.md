@@ -5,6 +5,7 @@ Suivre ce dépot va vous permettre de mettre en place un processus d'intégratio
 Les outils suivants seront mis en place :
 * SonarCloud (aka SonarLint)
 * CppCheck
+* CMake (build pour ARM)
 
 ## Avertissement
 
