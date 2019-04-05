@@ -6,8 +6,9 @@ language: c
 compiler: gcc
 
 before_script:
+  - export CC=arm-linux-gnueabihf-gcc
   - mkdir build
   - cd build
   - cmake ..
 
-script: CC=arm-linux-gnueabihf-gcc make
+script: make
