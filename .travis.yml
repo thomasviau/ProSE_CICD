@@ -23,7 +23,8 @@ before_script:
   - export CC=arm-linux-gnueabihf-gcc
   - mkdir build
   - cd build
-  - build-wrapper-linux-x86-64 --out-dir bw_output cmake ..
+  - cmake ..
+  - build-wrapper-linux-x86-64 --out-dir bw_output make
   - cd ..
   - sonar-scanner -Dsonar.verbose=true -X
 
