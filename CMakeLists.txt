@@ -3,6 +3,7 @@ project(CICD C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(CICD src/account.c src/account.h src/bank_database.h src/bank_database.c src/consumers.c)
+file(GLOB_RECURSE everyFile "src/*.c" "src/*.h")
+add_executable(CICD ${everyFile})
 
 target_link_libraries(CICD pthread)

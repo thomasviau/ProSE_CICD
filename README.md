@@ -1,3 +1,13 @@
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=coverage)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD) 
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=bugs)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=code_smells)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=ncloc)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=security_rating)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=alert_status)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
+
 # CI sur ProSE
 
 Suivre ce dépot va vous permettre de mettre en place un processus d'intégration continue (CI) sur votre projet ProSE.
