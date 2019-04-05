@@ -1,12 +1,13 @@
+notifications:
+  email: false
+
 language: c
 
-compiler:
-  - gcc
-  - clang
+compiler: gcc
 
 before_script:
   - mkdir build
   - cd build
   - cmake ..
 
-script: make
+script: CC=arm-linux-gnueabihf-gcc make
