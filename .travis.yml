@@ -23,6 +23,6 @@ before_script:
   - mkdir build
   - cd build
   - build-wrapper-linux-x86-64 --out-dir bw_output cmake ..
-  - sonar-scanner -X
+  - sonar-scanner -Dsonar.verbose=true -X
 
 script: make
