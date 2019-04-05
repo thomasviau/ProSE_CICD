@@ -3,4 +3,4 @@ project(CICD C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(CICD main.c)
+add_executable(CICD src/main.c)

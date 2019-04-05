@@ -2,7 +2,6 @@ notifications:
   email: false
 
 dist: trusty
-sudo: required
 language: c
 compiler: gcc
 
@@ -23,7 +22,7 @@ before_script:
   - export CC=arm-linux-gnueabihf-gcc
   - mkdir build
   - cd build
-  - cmake ..
+  - build-wrapper-linux-x86-64 --out-dir bw_output cmake ..
   - sonar-scanner
 
 script: make
