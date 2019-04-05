@@ -3,7 +3,7 @@
 Suivre ce dépot va vous permettre de mettre en place un processus d'intégration continue (CI) sur votre projet ProSE.
 
 Les outils suivants seront mis en place :
-* SonarCloud (aka SonarLint)
+* SonarCloud *(aka SonarLint)*
 * CppCheck
 
 ## Comptes requis
