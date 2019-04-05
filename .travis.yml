@@ -26,11 +26,7 @@ before_script:
   - cmake ..
   - make clean
   - build-wrapper-linux-x86-64 --out-dir bw_output make
-  - ls
-  - cd bw_output
-  - pwd
-  - ls
-  - cd ../..
+  - cd ..
   - sonar-scanner -Dsonar.verbose=true -X
 
 script: make
