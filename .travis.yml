@@ -1,15 +1,12 @@
 language: c
-compiler: gcc
 
-os: linux
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-7
+compiler:
+  - gcc
+  - clang
 
-script:
-  - cmake --version
-  - cmake CMakeLists.txt
-  - cmake  --build . --target neat
+before_script:
+  - mkdir build
+  - cd build
+  - cmake ..
+
+script: make
