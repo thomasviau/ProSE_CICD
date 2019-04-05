@@ -19,10 +19,12 @@ before_install:
   - arm-linux-gnueabihf-gcc --version
 
 before_script:
+  - ls
   - export CC=arm-linux-gnueabihf-gcc
   - mkdir build
   - cd build
   - build-wrapper-linux-x86-64 --out-dir bw_output cmake ..
+  - cd ..
   - sonar-scanner -Dsonar.verbose=true -X
 
 script: make
