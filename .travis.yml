@@ -2,10 +2,13 @@ notifications:
   email: false
 
 dist: trusty
-
+sudo: required
 language: c
-
 compiler: gcc
+
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
 
 addons:
   sonarcloud:
