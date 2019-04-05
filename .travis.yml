@@ -28,6 +28,7 @@ before_script:
   - build-wrapper-linux-x86-64 --out-dir bw_output make
   - ls
   - cd bw_output
+  - pwd
   - ls
   - cd ../..
   - sonar-scanner -Dsonar.verbose=true -X
