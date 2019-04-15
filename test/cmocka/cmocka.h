@@ -118,18 +118,18 @@ typedef uintmax_t LargestIntegralType;
 /* Smallest integral type capable of holding a pointer. */
 #if !defined(_UINTPTR_T) && !defined(_UINTPTR_T_DEFINED)
 # if defined(_WIN32)
-/* WIN32 is an ILP32 platform */
+    /* WIN32 is an ILP32 platform */
     typedef unsigned int uintptr_t;
 # elif defined(_WIN64)
-typedef unsigned long int uintptr_t;
+    typedef unsigned long int uintptr_t;
 # else /* _WIN32 */
 
 /* ILP32 and LP64 platforms */
 #  ifdef __WORDSIZE /* glibc */
 #   if __WORDSIZE == 64
-typedef unsigned long int uintptr_t;
+      typedef unsigned long int uintptr_t;
 #   else
-typedef unsigned int uintptr_t;
+      typedef unsigned int uintptr_t;
 #   endif /* __WORDSIZE == 64 */
 #  else /* __WORDSIZE */
 #   if defined(_LP64) || defined(_I32LPx)
@@ -1674,7 +1674,7 @@ int run_test(#function);
 #endif
 
 static inline void _unit_test_dummy(void **state) {
-	(void)state;
+    (void)state;
 }
 
 /** Initializes a UnitTest structure.
@@ -2067,7 +2067,7 @@ void test_free(void *ptr);
  * @see expect_assert_failure
  */
 void mock_assert(const int result, const char* const expression,
-				 const char * const file, const int line);
+                 const char * const file, const int line);
 
 #ifdef DOXYGEN
 /**
@@ -2118,15 +2118,15 @@ typedef void (*UnitTestFunction)(void **state);
 
 /* Function that determines whether a function parameter value is correct. */
 typedef int (*CheckParameterValue)(const LargestIntegralType value,
-								   const LargestIntegralType check_value_data);
+                                   const LargestIntegralType check_value_data);
 
 /* Type of the unit test function. */
 typedef enum UnitTestFunctionType {
-	UNIT_TEST_FUNCTION_TYPE_TEST = 0,
-	UNIT_TEST_FUNCTION_TYPE_SETUP,
-	UNIT_TEST_FUNCTION_TYPE_TEARDOWN,
-	UNIT_TEST_FUNCTION_TYPE_GROUP_SETUP,
-	UNIT_TEST_FUNCTION_TYPE_GROUP_TEARDOWN,
+    UNIT_TEST_FUNCTION_TYPE_TEST = 0,
+    UNIT_TEST_FUNCTION_TYPE_SETUP,
+    UNIT_TEST_FUNCTION_TYPE_TEARDOWN,
+    UNIT_TEST_FUNCTION_TYPE_GROUP_SETUP,
+    UNIT_TEST_FUNCTION_TYPE_GROUP_TEARDOWN,
 } UnitTestFunctionType;
 
 /*
@@ -2135,16 +2135,16 @@ typedef enum UnitTestFunctionType {
  * possible to specify NULL function pointers.
  */
 typedef struct UnitTest {
-	const char* name;
-	UnitTestFunction function;
-	UnitTestFunctionType function_type;
+    const char* name;
+    UnitTestFunction function;
+    UnitTestFunctionType function_type;
 } UnitTest;
 
 typedef struct GroupTest {
-	UnitTestFunction setup;
-	UnitTestFunction teardown;
-	const UnitTest *tests;
-	const size_t number_of_tests;
+    UnitTestFunction setup;
+    UnitTestFunction teardown;
+    const UnitTest *tests;
+    const size_t number_of_tests;
 } GroupTest;
 
 /* Function prototype for test functions. */
@@ -2154,25 +2154,25 @@ typedef void (*CMUnitTestFunction)(void **state);
 typedef int (*CMFixtureFunction)(void **state);
 
 struct CMUnitTest {
-	const char *name;
-	CMUnitTestFunction test_func;
-	CMFixtureFunction setup_func;
-	CMFixtureFunction teardown_func;
-	void *initial_state;
+    const char *name;
+    CMUnitTestFunction test_func;
+    CMFixtureFunction setup_func;
+    CMFixtureFunction teardown_func;
+    void *initial_state;
 };
 
 /* Location within some source code. */
 typedef struct SourceLocation {
-	const char* file;
-	int line;
+    const char* file;
+    int line;
 } SourceLocation;
 
 /* Event that's called to check a parameter value. */
 typedef struct CheckParameterEvent {
-	SourceLocation location;
-	const char *parameter_name;
-	CheckParameterValue check_value;
-	LargestIntegralType check_value_data;
+    SourceLocation location;
+    const char *parameter_name;
+    CheckParameterValue check_value;
+    LargestIntegralType check_value_data;
 } CheckParameterEvent;
 
 /* Used by expect_assert_failure() and mock_assert(). */
@@ -2182,130 +2182,130 @@ extern const char * global_last_failed_assert;
 
 /* Retrieves a value for the given function, as set by "will_return". */
 LargestIntegralType _mock(const char * const function, const char* const file,
-						  const int line);
+                          const int line);
 
 void _expect_function_call(
-		const char * const function_name,
-		const char * const file,
-		const int line,
-		const int count);
+    const char * const function_name,
+    const char * const file,
+    const int line,
+    const int count);
 
 void _function_called(const char * const function, const char* const file,
-					  const int line);
+                          const int line);
 
 void _expect_check(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line,
-		const CheckParameterValue check_function,
-		const LargestIntegralType check_data, CheckParameterEvent * const event,
-		const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line,
+    const CheckParameterValue check_function,
+    const LargestIntegralType check_data, CheckParameterEvent * const event,
+    const int count);
 
 void _expect_in_set(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const LargestIntegralType values[],
-		const size_t number_of_values, const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const LargestIntegralType values[],
+    const size_t number_of_values, const int count);
 void _expect_not_in_set(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const LargestIntegralType values[],
-		const size_t number_of_values, const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const LargestIntegralType values[],
+    const size_t number_of_values, const int count);
 
 void _expect_in_range(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line,
-		const LargestIntegralType minimum,
-		const LargestIntegralType maximum, const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line,
+    const LargestIntegralType minimum,
+    const LargestIntegralType maximum, const int count);
 void _expect_not_in_range(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line,
-		const LargestIntegralType minimum,
-		const LargestIntegralType maximum, const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line,
+    const LargestIntegralType minimum,
+    const LargestIntegralType maximum, const int count);
 
 void _expect_value(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const LargestIntegralType value,
-		const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const LargestIntegralType value,
+    const int count);
 void _expect_not_value(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const LargestIntegralType value,
-		const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const LargestIntegralType value,
+    const int count);
 
 void _expect_string(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const char* string,
-		const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const char* string,
+    const int count);
 void _expect_not_string(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const char* string,
-		const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const char* string,
+    const int count);
 
 void _expect_memory(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const void* const memory,
-		const size_t size, const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const void* const memory,
+    const size_t size, const int count);
 void _expect_not_memory(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const void* const memory,
-		const size_t size, const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const void* const memory,
+    const size_t size, const int count);
 
 void _expect_any(
-		const char* const function, const char* const parameter,
-		const char* const file, const int line, const int count);
+    const char* const function, const char* const parameter,
+    const char* const file, const int line, const int count);
 
 void _check_expected(
-		const char * const function_name, const char * const parameter_name,
-		const char* file, const int line, const LargestIntegralType value);
+    const char * const function_name, const char * const parameter_name,
+    const char* file, const int line, const LargestIntegralType value);
 
 void _will_return(const char * const function_name, const char * const file,
-				  const int line, const LargestIntegralType value,
-				  const int count);
+                  const int line, const LargestIntegralType value,
+                  const int count);
 void _assert_true(const LargestIntegralType result,
-				  const char* const expression,
-				  const char * const file, const int line);
+                  const char* const expression,
+                  const char * const file, const int line);
 void _assert_return_code(const LargestIntegralType result,
-						 size_t rlen,
-						 const LargestIntegralType error,
-						 const char * const expression,
-						 const char * const file,
-						 const int line);
+                         size_t rlen,
+                         const LargestIntegralType error,
+                         const char * const expression,
+                         const char * const file,
+                         const int line);
 void _assert_float_equal(const float a, const float n,
-						 const float epsilon, const char* const file,
-						 const int line);
+		const float epsilon, const char* const file,
+		const int line);
 void _assert_float_not_equal(const float a, const float n,
-							 const float epsilon, const char* const file,
-							 const int line);
+		const float epsilon, const char* const file,
+		const int line);
 void _assert_int_equal(
-		const LargestIntegralType a, const LargestIntegralType b,
-		const char * const file, const int line);
+    const LargestIntegralType a, const LargestIntegralType b,
+    const char * const file, const int line);
 void _assert_int_not_equal(
-		const LargestIntegralType a, const LargestIntegralType b,
-		const char * const file, const int line);
+    const LargestIntegralType a, const LargestIntegralType b,
+    const char * const file, const int line);
 void _assert_string_equal(const char * const a, const char * const b,
-						  const char * const file, const int line);
+                          const char * const file, const int line);
 void _assert_string_not_equal(const char * const a, const char * const b,
-							  const char *file, const int line);
+                              const char *file, const int line);
 void _assert_memory_equal(const void * const a, const void * const b,
-						  const size_t size, const char* const file,
-						  const int line);
+                          const size_t size, const char* const file,
+                          const int line);
 void _assert_memory_not_equal(const void * const a, const void * const b,
-							  const size_t size, const char* const file,
-							  const int line);
+                              const size_t size, const char* const file,
+                              const int line);
 void _assert_in_range(
-		const LargestIntegralType value, const LargestIntegralType minimum,
-		const LargestIntegralType maximum, const char* const file, const int line);
+    const LargestIntegralType value, const LargestIntegralType minimum,
+    const LargestIntegralType maximum, const char* const file, const int line);
 void _assert_not_in_range(
-		const LargestIntegralType value, const LargestIntegralType minimum,
-		const LargestIntegralType maximum, const char* const file, const int line);
+    const LargestIntegralType value, const LargestIntegralType minimum,
+    const LargestIntegralType maximum, const char* const file, const int line);
 void _assert_in_set(
-		const LargestIntegralType value, const LargestIntegralType values[],
-		const size_t number_of_values, const char* const file, const int line);
+    const LargestIntegralType value, const LargestIntegralType values[],
+    const size_t number_of_values, const char* const file, const int line);
 void _assert_not_in_set(
-		const LargestIntegralType value, const LargestIntegralType values[],
-		const size_t number_of_values, const char* const file, const int line);
+    const LargestIntegralType value, const LargestIntegralType values[],
+    const size_t number_of_values, const char* const file, const int line);
 
 void* _test_malloc(const size_t size, const char* file, const int line);
 void* _test_realloc(void *ptr, const size_t size, const char* file, const int line);
 void* _test_calloc(const size_t number_of_elements, const size_t size,
-				   const char* file, const int line);
+                   const char* file, const int line);
 void _test_free(void* const ptr, const char* file, const int line);
 
 void _fail(const char * const file, const int line);
@@ -2313,20 +2313,20 @@ void _fail(const char * const file, const int line);
 void _skip(const char * const file, const int line);
 
 int _run_test(
-		const char * const function_name, const UnitTestFunction Function,
-		void ** const volatile state, const UnitTestFunctionType function_type,
-		const void* const heap_check_point);
+    const char * const function_name, const UnitTestFunction Function,
+    void ** const volatile state, const UnitTestFunctionType function_type,
+    const void* const heap_check_point);
 CMOCKA_DEPRECATED int _run_tests(const UnitTest * const tests,
-								 const size_t number_of_tests);
+                                 const size_t number_of_tests);
 CMOCKA_DEPRECATED int _run_group_tests(const UnitTest * const tests,
-									   const size_t number_of_tests);
+                                       const size_t number_of_tests);
 
 /* Test runner */
 int _cmocka_run_group_tests(const char *group_name,
-							const struct CMUnitTest * const tests,
-							const size_t num_tests,
-							CMFixtureFunction group_setup,
-							CMFixtureFunction group_teardown);
+                            const struct CMUnitTest * const tests,
+                            const size_t num_tests,
+                            CMFixtureFunction group_setup,
+                            CMFixtureFunction group_teardown);
 
 /* Standard output and error print methods. */
 void print_message(const char* const format, ...) CMOCKA_PRINTF_ATTRIBUTE(1, 2);
@@ -2335,10 +2335,10 @@ void vprint_message(const char* const format, va_list args) CMOCKA_PRINTF_ATTRIB
 void vprint_error(const char* const format, va_list args) CMOCKA_PRINTF_ATTRIBUTE(1, 0);
 
 enum cm_message_output {
-	CM_OUTPUT_STDOUT,
-	CM_OUTPUT_SUBUNIT,
-	CM_OUTPUT_TAP,
-	CM_OUTPUT_XML,
+    CM_OUTPUT_STDOUT,
+    CM_OUTPUT_SUBUNIT,
+    CM_OUTPUT_TAP,
+    CM_OUTPUT_XML,
 };
 
 /**
