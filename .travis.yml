@@ -14,11 +14,9 @@ addons:
     organization: "nathan-lg-github"
 
 before_install:
-  # ARM Compilation
+  # Install LCov and CMocka
   - sudo apt-get update -qq
-  - sudo apt-get install -y gcc-arm-linux-gnueabihf lcov libcmocka0 libcmocka-dev
-  - arm-linux-gnueabihf-gcc --version
-  - export CC=arm-linux-gnueabihf-gcc
+  - sudo apt-get install -y lcov libcmocka0 libcmocka-dev
 
 before_script:
   # CMocka
