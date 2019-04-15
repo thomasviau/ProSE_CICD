@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <setjmp.h>
-#include "cmocka.h"
+#include "cmocka/cmocka.h"
 
 // Inclusion du module à tester.
 #include "package.c"
