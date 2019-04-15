@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "cmocka.h"
+#include "cmocka/cmocka.h"
 
 #define NB_SUITE_TESTS 1
 
