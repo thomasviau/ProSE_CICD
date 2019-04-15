@@ -17,12 +17,6 @@ file(GLOB_RECURSE testFiles "test/*.c" "test/*.h")
 add_executable(CICD ${everyFile})
 add_executable(CICDTest ${testFiles})
 
-find_library(CMOCKA_LIB cmocka NAMES libcmocka.so PATHS "/test/cmocka")
-
-if (NOT CMOCKA_LIB)
-    message(FATAL_ERROR "cmocka library not found")
-endif()
-
-target_link_libraries(CICDTest cmocka)
+target_link_libraries(CICDTest -lcmocka)
 
 target_include_directories(CICDTest PRIVATE ${PROJECT_SOURCE_DIR}/src ${CMAKE_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR} ${CMOCKA_PUBLIC_INCLUDE_DIRS})

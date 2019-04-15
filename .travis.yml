@@ -25,7 +25,6 @@ before_script:
   - make clean
 
 script:
-  - make
   # Build with SonarCloud
   - build-wrapper-linux-x86-64 --out-dir bw_output make
   - file ./CICDTest
