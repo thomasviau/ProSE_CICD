@@ -16,6 +16,18 @@ static void testRunner();
 
 int main(int argc, char * argv[])
 {
+	if ((argc > 1)) {
+		if (!strcmp(argv[1], "-texte")) {
+			cmocka_set_message_output(CM_OUTPUT_STDOUT);
+		} else if (!strcmp(argv[1], "-subunit")) {
+			cmocka_set_message_output(CM_OUTPUT_SUBUNIT);
+		} else if (!strcmp(argv[1], "-tap")) {
+			cmocka_set_message_output(CM_OUTPUT_TAP);
+		} else if (!strcmp(argv[1], "-xml")) {
+			cmocka_set_message_output(CM_OUTPUT_XML);
+		}
+	}
+
 	testRunner();
 	return 0;
 }
