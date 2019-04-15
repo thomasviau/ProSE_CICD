@@ -29,11 +29,12 @@ before_script:
   # CMake
   - mkdir build
   - cd build
-  - cmake ..
+  - cmake -DCMAKE_BUILD_TYPE=Debug ..
   - make clean
 
 script:
   # Build with SonarCloud
   - build-wrapper-linux-x86-64 --out-dir bw_output make
+  - make CICD_coverage
   - cd ..
   - sonar-scanner
