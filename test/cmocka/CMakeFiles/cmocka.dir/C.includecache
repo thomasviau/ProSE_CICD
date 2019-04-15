@@ -18,9 +18,9 @@ windows.h
 stdio.h
 -
 
-/home/nathan/Documents/cmocka/cmocka/src/cmocka.c
+/files/Files/Dev/cmocka/cmocka/src/cmocka.c
 config.h
-/home/nathan/Documents/cmocka/cmocka/src/config.h
+/files/Files/Dev/cmocka/cmocka/src/config.h
 malloc.h
 -
 inttypes.h
@@ -48,7 +48,7 @@ time.h
 float.h
 -
 cmocka_platform.h
-/home/nathan/Documents/cmocka/cmocka/src/cmocka_platform.h
+/files/Files/Dev/cmocka/cmocka/src/cmocka_platform.h
 cmocka.h
 -
 cmocka_private.h

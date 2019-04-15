@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nathan/Documents/cmocka/cmocka
+CMAKE_SOURCE_DIR = /files/Files/Dev/cmocka/cmocka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nathan/Documents/cmocka/cmocka/build
+CMAKE_BINARY_DIR = /files/Files/Dev/cmocka/cmocka/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -93,7 +93,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/nathan/Documents/cmocka/cmocka/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /files/Files/Dev/cmocka/cmocka/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -104,7 +104,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/nathan/Documents/cmocka/cmocka/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/nathan/Documents/cmocka/cmocka/build/CPackSourceConfig.cmake
+	cd /files/Files/Dev/cmocka/cmocka/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /files/Files/Dev/cmocka/cmocka/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,14 +159,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Documents/cmocka/cmocka/build/CMakeFiles /home/nathan/Documents/cmocka/cmocka/build/src/CMakeFiles/progress.marks
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/Documents/cmocka/cmocka/build/CMakeFiles 0
+	cd /files/Files/Dev/cmocka/cmocka/build && $(CMAKE_COMMAND) -E cmake_progress_start /files/Files/Dev/cmocka/cmocka/build/CMakeFiles /files/Files/Dev/cmocka/cmocka/build/src/CMakeFiles/progress.marks
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /files/Files/Dev/cmocka/cmocka/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /files/Files/Dev/cmocka/cmocka/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/cmocka.dir/rule:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/cmocka.dir/rule
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/cmocka.dir/rule
 .PHONY : src/CMakeFiles/cmocka.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ cmocka: src/CMakeFiles/cmocka.dir/rule
 
 # fast build rule for target.
 cmocka/fast:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f src/CMakeFiles/cmocka.dir/build.make src/CMakeFiles/cmocka.dir/build
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f src/CMakeFiles/cmocka.dir/build.make src/CMakeFiles/cmocka.dir/build
 .PHONY : cmocka/fast
 
 cmocka.o: cmocka.c.o
@@ -210,7 +210,7 @@ cmocka.o: cmocka.c.o
 
 # target to build an object file
 cmocka.c.o:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f src/CMakeFiles/cmocka.dir/build.make src/CMakeFiles/cmocka.dir/cmocka.c.o
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f src/CMakeFiles/cmocka.dir/build.make src/CMakeFiles/cmocka.dir/cmocka.c.o
 .PHONY : cmocka.c.o
 
 cmocka.i: cmocka.c.i
@@ -219,7 +219,7 @@ cmocka.i: cmocka.c.i
 
 # target to preprocess a source file
 cmocka.c.i:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f src/CMakeFiles/cmocka.dir/build.make src/CMakeFiles/cmocka.dir/cmocka.c.i
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f src/CMakeFiles/cmocka.dir/build.make src/CMakeFiles/cmocka.dir/cmocka.c.i
 .PHONY : cmocka.c.i
 
 cmocka.s: cmocka.c.s
@@ -228,7 +228,7 @@ cmocka.s: cmocka.c.s
 
 # target to generate assembly for a file
 cmocka.c.s:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(MAKE) -f src/CMakeFiles/cmocka.dir/build.make src/CMakeFiles/cmocka.dir/cmocka.c.s
+	cd /files/Files/Dev/cmocka/cmocka/build && $(MAKE) -f src/CMakeFiles/cmocka.dir/build.make src/CMakeFiles/cmocka.dir/cmocka.c.s
 .PHONY : cmocka.c.s
 
 # Help Target
@@ -261,6 +261,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/nathan/Documents/cmocka/cmocka/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /files/Files/Dev/cmocka/cmocka/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
