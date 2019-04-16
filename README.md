@@ -68,7 +68,9 @@ Pensez à vérifier avec votre client si vous avez l'autorisation d'utiliser tou
 
 ## Utilisation
 
-C'est tout simple ! Il vous suffit de push sur votre dépot Git. Travis va se déclencher tout seul et envoyer les résultats à SonarCloud. Ta Da !
+C'est tout simple ! Il vous suffit de push sur votre dépot Git. Travis va se déclencher tout seul et envoyer les résultats de SonarLint à SonarCloud. Ta Da !
+
+Les tests CMocka et CppCheck sont accessibles depuis la console Travis CI.
 
 ## Fonctionnement
 
