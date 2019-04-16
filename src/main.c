@@ -7,7 +7,7 @@ int main (void)
 {
 
 	int value;
-	value = toBeTested();
+	value = toBeTested(0);
 
 	printf("Hello !");
 	printf("%d", value);

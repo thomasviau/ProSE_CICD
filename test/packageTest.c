@@ -20,7 +20,7 @@ static void testFunctionTropBien(void **state)
 {
 	int result;
 
-	result = toBeTested();
+	result = toBeTested(1);
 
 	assert_int_equal(0, result);
 }

@@ -1,6 +1,6 @@
-int toBeTested (void)
+int toBeTested (int value)
 {
-	if (0) {
+	if (value) {
 		return 1;
 	} else {
 		return 0;
