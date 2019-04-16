@@ -61,7 +61,23 @@ Pensez à vérifier avec votre client si vous avez l'autorisation d'utiliser tou
 2. Sur Travis CI, allez dans les options de votre projet. Créez une variable d'envrionnement intitulée `SONAR_TOKEN` ayant comme valeur le token précédement copié.
 3. Sur SonarCloud, notez l'ID (key) de votre organisation. 
 4. Dans le fichier `.travis.yml` sur votre dépot GitHub, changez la clé `organization` à la ligne 14 par l'ID de votre organisation.
-
+5. Dans le fichier `sonar-project.properties`, changez les valeurs `sonar.projectKey`, `sonar.projectName` et `sonar.projectVersion` pour correspondre à votre projet. L'ID (key) de votre projet est trouvable directement sur SonarCloud. Les deux autres peuvent prendre le nom que vous voulez.
 ### CMake
 
 1. Dans le fichier `CMakeLists.txt` sur votre dépot GitHub, changez le nom de votre projet (constante `PROSE_PROJECT_NAME`) à la ligne 5.
+
+## Utilisation
+
+C'est tout simple ! Il vous suffit de push sur votre dépot Git. Travis va se déclencher tout seul et envoyer les résultats à SonarCloud. Ta Da !
+
+## Fonctionnement
+
+CMake permet de générer des Makefile (parce que entre nous, c'est chiant au possible !). Les cibles suivantes seront alors accessibles :
+
+| Nom   | KeskeC |
+|----------|:-------------|
+| `PROSE_PROJECT_NAME` | Programme classique (src) |
+| `PROSE_PROJECT_NAME + Test` | Tests unitaires (test) |
+| coverage | Génération des fichiers de coverage |
+
+La librairie CMocka est dans /test/cmocka. Le fichier header est `cmocka.h`, le .so est `CICD.so`.
