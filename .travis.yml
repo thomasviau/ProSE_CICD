@@ -29,7 +29,6 @@ before_script:
 script:
   # Build with SonarCloud
   - build-wrapper-linux-x86-64 --out-dir bw_output make
-  - file ./CICDTest
-  - make CICD_coverage
+  - make coverage
   - cd ..
   - sonar-scanner

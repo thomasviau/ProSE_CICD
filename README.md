@@ -15,8 +15,8 @@
 Suivre ce dépot va vous permettre de mettre en place un processus d'intégration continue (CI) sur votre projet ProSE.
 
 Les outils suivants seront mis en place :
-* SonarCloud (aka SonarLint)
-* CppCheck
+* [SonarCloud](https://sonarcloud.io/) (aka [SonarLint](https://www.sonarlint.org/))
+* [CppCheck](http://cppcheck.sourceforge.net/)
 
 ## Avertissement
 
@@ -49,3 +49,19 @@ Pensez à vérifier avec votre client si vous avez l'autorisation d'utiliser tou
 2. Liez votre compte Travis CI à votre compte GitHub (https://github.com/marketplace/travis-ci). Sélectionnez bien la version gratuite. Contactez Travis CI si vous avez des problèmes pour activer votre offre GitHub Student. Le support est très réactif.
 
 **Vos comptes sont à présent configurés.**
+
+### Dépot GitHub
+
+1. Créez votre dépot GitHub. Pour cela, la meilleure idée est de forker celui-ci. En effet, CMake est configuré avec la bonne arborescence.
+2. Depuis le marketplace, activez l'intégration avec Travis CI.
+
+### Lien Travis - SonarCloud
+
+1. Générez un token sur SonarCloud : My account ; Security. Entrez un nom de token, puis copiez le token généré.
+2. Sur Travis CI, allez dans les options de votre projet. Créez une variable d'envrionnement intitulée `SONAR_TOKEN` ayant comme valeur le token précédement copié.
+3. Sur SonarCloud, notez l'ID (key) de votre organisation. 
+4. Dans le fichier `.travis.yml` sur votre dépot GitHub, changez la clé `organization` à la ligne 14 par l'ID de votre organisation.
+
+### CMake
+
+1. Dans le fichier `CMakeLists.txt` sur votre dépot GitHub, changez le nom de votre projet (constante `PROSE_PROJECT_NAME`) à la ligne 5.
