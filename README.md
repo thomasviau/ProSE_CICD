@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Nathan-LG/ProSE_CICD.svg?branch=master)](https://travis-ci.com/Nathan-LG/ProSE_CICD)
+
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=coverage)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD) 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=bugs)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=code_smells)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
@@ -15,7 +17,6 @@ Suivre ce dépot va vous permettre de mettre en place un processus d'intégratio
 Les outils suivants seront mis en place :
 * SonarCloud (aka SonarLint)
 * CppCheck
-* CMake (build pour ARM)
 
 ## Avertissement
 
