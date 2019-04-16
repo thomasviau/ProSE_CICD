@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/Nathan-LG/ProSE_CICD.svg?branch=master)](https://travis-ci.com/Nathan-LG/ProSE_CICD)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=alert_status)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
 
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=coverage)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD) 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=bugs)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
@@ -8,7 +9,6 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=security_rating)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Nathan-LG_ProSE_CICD&metric=alert_status)](https://sonarcloud.io/dashboard?id=Nathan-LG_ProSE_CICD)
 
 # CI sur ProSE
 
@@ -33,17 +33,17 @@ Pensez à vérifier avec votre client si vous avez l'autorisation d'utiliser tou
 
 ## Installation
 
-### GitHub
+### Compte GitHub
 
 1. Créez un dépot public (sinon SonarCloud ne pourra pas fonctionner).
 2. Pensez à lier votre IDE à Git (menu Git ou VCS). Ca sera beaucoup plus simple pour vous.
 
-### SonarCloud
+### Compte SonarCloud
 
 1. Connectez-vous avec votre compte GitHub. De cette façon, vos dépots seront automatiquement accessibles.
 2. Lorsqu'on vous le demande, prenez l'offre gratuite (aka Open source).
 
-### Travis CI
+### Compte Travis CI
 
 1. Connectez-vous avec votre compte GitHub. De cette façon, vos dépots seront automatiquement accessibles.
 2. Liez votre compte Travis CI à votre compte GitHub (https://github.com/marketplace/travis-ci). Sélectionnez bien la version gratuite. Contactez Travis CI si vous avez des problèmes pour activer votre offre GitHub Student. Le support est très réactif.

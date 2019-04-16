@@ -6,6 +6,9 @@
 # - Added support for Clang.
 # - Some additional usage instructions.
 #
+# 2019-04-16, Nathan Le Granvallet
+# - Added support for GCov
+#
 # USAGE:
 # 1. Copy this file into your cmake modules path.
 #
