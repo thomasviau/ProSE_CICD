@@ -35,13 +35,16 @@ Pensez à vérifier avec votre client si vous avez l'autorisation d'utiliser tou
 
 ### Compte GitHub
 
-1. Créez un dépot public (sinon SonarCloud ne pourra pas fonctionner).
+1. Créez un dépot public (sinon SonarCloud ne pourra pas fonctionner). Pour cela, la meilleure idée est de forker celui-ci. En effet, CMake est configuré avec la bonne arborescence.
 2. Pensez à lier votre IDE à Git (menu Git ou VCS). Ca sera beaucoup plus simple pour vous.
 
 ### Compte SonarCloud
 
-1. Connectez-vous avec votre compte GitHub. De cette façon, vos dépots seront automatiquement accessibles.
-2. Lorsqu'on vous le demande, prenez l'offre gratuite (aka Open source).
+1. Connectez-vous avec votre compte GitHub.
+2. Créez un nouveau projet SonarCloud
+3. Lorsqu'on vous le demande, prenez l'option vous menant sur GitHub puis sélectionnez le dépot précédemment créé.
+4. Lorsqu'on vous le demande, prenez l'offre gratuite (aka Open source).
+5. Finissez par cocher votre dépot GitHub sur SonarCloud puis cliquez sur Set Up.
 
 ### Compte Travis CI
 
@@ -52,8 +55,7 @@ Pensez à vérifier avec votre client si vous avez l'autorisation d'utiliser tou
 
 ### Dépot GitHub
 
-1. Créez votre dépot GitHub. Pour cela, la meilleure idée est de forker celui-ci. En effet, CMake est configuré avec la bonne arborescence.
-2. Depuis le marketplace, activez l'intégration avec Travis CI.
+1. Depuis le marketplace, activez l'intégration avec Travis CI, prenez l'option gratuite.
 
 ### Lien Travis - SonarCloud
 
@@ -62,6 +64,7 @@ Pensez à vérifier avec votre client si vous avez l'autorisation d'utiliser tou
 3. Sur SonarCloud, notez l'ID (key) de votre organisation. 
 4. Dans le fichier `.travis.yml` sur votre dépot GitHub, changez la clé `organization` à la ligne 14 par l'ID de votre organisation.
 5. Dans le fichier `sonar-project.properties`, changez les valeurs `sonar.projectKey`, `sonar.projectName` et `sonar.projectVersion` pour correspondre à votre projet. L'ID (key) de votre projet est trouvable directement sur SonarCloud. Les deux autres peuvent prendre le nom que vous voulez.
+
 ### CMake
 
 1. Dans le fichier `CMakeLists.txt` sur votre dépot GitHub, changez le nom de votre projet (constante `PROSE_PROJECT_NAME`) à la ligne 5.
