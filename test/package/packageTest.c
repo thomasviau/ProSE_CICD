@@ -1,10 +1,10 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <setjmp.h>
-#include "cmocka/cmocka.h"
+#include "test/cmocka/cmocka.h"
 
 // Inclusion du module à tester.
-#include "package.c"
+#include "src/package/package.c"
 
 static int setUp(void **state)
 {

@@ -1,3 +1,6 @@
 cmake-build-debug/make
 bw-output/
 build/
+doc/html/
+.vscode/
+.idea/
