@@ -19,7 +19,7 @@ static int tearDown(void **state)
 static void testFunctionTropBien0(void **state)
 {
 	int result;
-	result = toBeTested(0);
+	result = toBeTested(0); 
 	assert_int_equal(0, result);
 }
 
