@@ -97,10 +97,10 @@ FUNCTION(SETUP_TARGET_FOR_COVERAGE _targetname _testrunner _outputname)
 
             # Run tests
             COMMAND ${_testrunner} ${ARGV3}
-            COMMAND ${GCOV_PATH} -b CMakeFiles/CICDTest.dir/test/*
-            COMMAND ${GCOV_PATH} -b CMakeFiles/CICDTest.dir/test/*/*
-            COMMAND ${GCOV_PATH} -b CMakeFiles/CICDTest.dir/test/*/*/*
-            COMMAND ${GCOV_PATH} -b CMakeFiles/CICDTest.dir/test/*/*/*/*
+            COMMAND ${GCOV_PATH} -b CMakeFiles/NexetupCTest.dir/test/*
+            COMMAND ${GCOV_PATH} -b CMakeFiles/NexetupCTest.dir/test/*/*
+            COMMAND ${GCOV_PATH} -b CMakeFiles/NexetupCTest.dir/test/*/*/*
+            COMMAND ${GCOV_PATH} -b CMakeFiles/NexetupCTest.dir/test/*/*/*/*
             WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
             )
 
