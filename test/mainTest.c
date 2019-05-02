@@ -16,6 +16,9 @@ static void testRunner();
 
 int main(int argc, char * argv[])
 {
+
+
+
 	if ((argc > 1)) {
 		if (!strcmp(argv[1], "-texte")) {
 			cmocka_set_message_output(CM_OUTPUT_STDOUT);

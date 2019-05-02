@@ -27,7 +27,7 @@ static void testFunctionTropBien1(void **state)
 {
     int result;
     result = toBeTested(1);
-    assert_int_equal(1, result);
+    assert_int_equal(0, result);
 }
 
 static const struct CMUnitTest tests[] =
