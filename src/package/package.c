@@ -1,7 +1,7 @@
 /**
  * @file package.c
  *
- * @brief Ceci est un package, les packages c'esr vraiment rigolo
+ * @brief Ceci est un package, les packages c'est vraiment rigolo
  * @date 04/03/2019
  * @author Nathan Le Granvallet
  *

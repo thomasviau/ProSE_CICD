@@ -16,20 +16,25 @@ static int tearDown(void **state)
 	return 0;
 }
 
-static void testFunctionTropBien(void **state)
+static void testFunctionTropBien0(void **state)
 {
 	int result;
-
-	result = toBeTested(1);
-
+	result = toBeTested(0);
 	assert_int_equal(0, result);
+}
+
+static void testFunctionTropBien1(void **state)
+{
+    int result;
+    result = toBeTested(1);
+    assert_int_equal(1, result);
 }
 
 static const struct CMUnitTest tests[] =
 {
-	cmocka_unit_test(testFunctionTropBien)
+	cmocka_unit_test(testFunctionTropBien0),
+    cmocka_unit_test(testFunctionTropBien1)
 };
-
 
 int packageTestRunTests()
 {
