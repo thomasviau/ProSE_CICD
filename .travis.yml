@@ -11,7 +11,7 @@ cache:
 
 addons:
   sonarcloud:
-    organization: "nathan-lg-github"
+    organization: "thomasviau-github"
 
 before_install:
   - sudo apt-get update -qq
