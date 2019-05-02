@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 set(CMAKE_C_STANDARD 99)
 
 # Project name
-set(PROSE_PROJECT_NAME NexetupC)
+set(PROSE_PROJECT_NAME SKYLANDER)
 
 # Define projects
 project(${PROSE_PROJECT_NAME} C)
