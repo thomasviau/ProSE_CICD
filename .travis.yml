@@ -18,6 +18,7 @@ before_install:
   - sudo apt-get install -y lcov libcmocka0 libcmocka-dev cppcheck
 
 before_script:
+  - git fetch --unshallow
   # CppCheck
   - cppcheck --enable=all --force test/ src/
   # CMake
