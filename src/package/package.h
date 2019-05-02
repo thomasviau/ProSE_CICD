@@ -33,6 +33,6 @@
  * @retval 0 si value != 0
  */
 
-extern int toBeTested(int value);
+extern int toBeTested(int value); 
 
 #endif //CICDTEST_PACKAGE_H
