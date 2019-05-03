@@ -38,7 +38,7 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 #include <pthread.h>
 #include <stdlib.h>
 
-#include "files/example.h"
+#include "src/files/example.h"
 
 int main (void)
 {
