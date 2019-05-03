@@ -37,7 +37,7 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 #include <stdarg.h>
 #include <stddef.h>
 #include <setjmp.h>
-#include "../cmocka/cmocka.h"
+#include "cmocka/cmocka.h"
 
 #include <stdio.h>
 #include <string.h>
