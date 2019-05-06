@@ -42,17 +42,5 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 
 int main (void)
 {
-	int a = 5;
-	int b = 7;
-
-	int sumAB = addFunction(a, b);
-
-	int aPlusOne = plusOne(a);
-
-	int bPlusOne = plusOne(b);
-
-	printf("%d et %d et %d\n", sumAB, aPlusOne, bPlusOne);
-
 	return 0;
-
 }
